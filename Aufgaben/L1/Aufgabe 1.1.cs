@@ -28,14 +28,14 @@ namespace L1
 
             string v = args[1];
             result = Double.Parse(v);
-            getKugelInfo(2.34);
+            getKugelInfo(result);
 
         }
         else if(args[0]==o){
             
             string v = args[1];
             result = Double.Parse(v);
-            getOktaederInfo(2.34);
+            getOktaederInfo(result);
 
         }
         else{
