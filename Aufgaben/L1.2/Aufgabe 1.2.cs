@@ -32,7 +32,7 @@ namespace L1._2
             int s = ran.Next(0, subjects.Length);
             int v = ran.Next(0, verbs.Length);
             int o = ran.Next(0, objects.Length);
-       
+              
             while (subjects[s] == "vergeben")
             {
                 s = ran.Next(0, subjects.Length);
