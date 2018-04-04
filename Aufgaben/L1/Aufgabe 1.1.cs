@@ -7,13 +7,13 @@ namespace L1
         static void Main(string[] args)
         {
 
-        string w = "w";
+        string w = "w";// müssen nicht definiert werden!
         string k = "k";
         string o = "o";
         double result;
 
 
-        if (args.Length == 0)
+        if (args.Length == 0)// Lieber switch case, einfacher zu lesen, args[0] als Variable, damit Programm nicht immer in Array muss
         {
             System.Console.WriteLine("Bitte das Kürzel für den zu berechnenden Körper eingeben. w=Würfel, k=Kugel, o=Oktaeder.");
             System.Console.WriteLine("Danach den Wert für die Kantenlänge bzw. den Durchmesser. Bsp: dotnet run w 2,34");
@@ -46,7 +46,7 @@ namespace L1
           
         }
 
-        public static double Kubusflaeche(double d)
+        public static double Kubusflaeche(double d) // Variabeln und Code auf Englisch. Zur Übersicht region info!
         {
             double A = Math.Pow((6 * d), 2);
             return A;
@@ -57,7 +57,7 @@ namespace L1
             return V;
         }
 
-        public static void getKubusInfo(double d)
+        public static void getKubusInfo(double d) // keine Rückgabe, obwohl in Aufgabenstellung vorgegeben
         {
             double a = Math.Round(Kubusflaeche(d),2);
             double b = Math.Round(KubusVolumen(d),2);
@@ -74,7 +74,7 @@ namespace L1
             return V;
         }
 
-        public static void getKugelInfo(double d)
+        public static void getKugelInfo(double d) // keine Rückgabe, obwohl in Aufgabenstellung vorgegeben
         {
              double a = Math.Round(Kugelflaeche(d),2);
             double b = Math.Round(KugelVolumen(d),2);
@@ -96,7 +96,7 @@ namespace L1
             return V;
         }
 
-        public static void getOktaederInfo(double d)
+        public static void getOktaederInfo(double d) // keine Rückgabe, obwohl in Aufgabenstellung vorgegeben
         {
             double a = Math.Round(Oktaederflaeche(d),2);
             double b = Math.Round(OktaederVolumen(d),2);

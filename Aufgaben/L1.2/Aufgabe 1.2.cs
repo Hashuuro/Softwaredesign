@@ -27,13 +27,13 @@ namespace L1._2
         public static void getVers()
         {
 
-            Random ran = new Random();
+            Random ran = new Random();// Seeds werden festgelegt( Systemzeit), Beschreibungen von Klassen anschauen!
 
             int s = ran.Next(0, subjects.Length);
             int v = ran.Next(0, verbs.Length);
             int o = ran.Next(0, objects.Length);
               
-            while (subjects[s] == "vergeben")
+            while (subjects[s] == "vergeben")// so schlecht aufgebaut, Chance auf Treffer immer geringer. Wort darf nicht mehr benutzt werden=> Endlos-Schleife
             {
                 s = ran.Next(0, subjects.Length);
             }
