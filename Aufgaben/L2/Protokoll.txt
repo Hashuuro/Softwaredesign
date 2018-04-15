@@ -1,0 +1,20 @@
+Protokoll zur Aufgabe 2 "Debugging"
+
+1. 	Macht euch klar, dass die Datenstruktur Person rekursiv ist, 
+	denn jedes Objekt vom Typ Person referenziert zwei weitere Objekte vom Typ Person, 
+	nämlich Mom und Dad.
+	
+2.	Die Methdode BuildTree() baut einen Beispiel-Baum auf. Setzt einen Breakpoint in Zeile 19 von Program.cs, 
+	startet den Debugger und seht Euch den Inhalt von root im Debugger an.
+	
+3.	Die Methode Find() durchläuft rekursiv den Baum und prüft alle Person-Objekte darauf, 
+	ob die Bedingung in Zeile 22 gegeben ist.
+	Die erste Person, die die Bedingung erfüllt, wird zurückgeliefert.
+	
+4.	Ändert die Bedingung so, dass nicht gleich die erste Person ("Willi") zurückgegeben wird. 
+	Eventuell gibt es Abstürze. Analysiert die Abstürze mit dem Debugger, 
+	überprüft Variableninhalte und den Call-Stack.
+	
+5.	Schreibt komplexere Bedingungen, findet z.B. die erste Person, die in einer Altersspanne liegt,
+	vergleicht dazu person.DateOfBirth.Year mit DateTime.Now.Year. 
+	Analysiert mit dem Debugger, ob Eure Bedingung richtig ist.
