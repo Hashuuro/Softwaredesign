@@ -4,17 +4,71 @@ Protokoll zur Aufgabe 2 "Debugging"
 	denn jedes Objekt vom Typ Person referenziert zwei weitere Objekte vom Typ Person, 
 	nämlich Mom und Dad.
 	
+	
+A1. Die Klasse Person beinhaltet Parameter wie FirstName, LastName und DateOfBirth,
+	aber auch weitere Objekte vom Typ Person, nämlich Mom und Dad.
+	Diese rufen wiederrum weitere Objekte vom Typ Person auf, 
+	bis ein Null-Wert zurückgegeben wird.
+	
 2.	Die Methdode BuildTree() baut einen Beispiel-Baum auf. Setzt einen Breakpoint in Zeile 19 von Program.cs, 
 	startet den Debugger und seht Euch den Inhalt von root im Debugger an.
 	
+A2.	Der Inhalt von root ist der komplette Stammbaum, beginnend mit dem jüngsten Familienmitglied.
+	Der Aufbau ist wie folgt:
+
+	Dad:---> Objekt vom Typ Person
+	
+	DateOfBirth [DateTime]: {21.07.1982 00:00:00}
+		=> Hier wird das Geburtsdatum zurückgegeben 
+		
+	FirstName [string]: "Willi" 
+	
+	LastName [string]:	"Cambridge"
+	
+	Mom: ---> Objekt vom Typ Person
+	
+	Die Objekte Mom und Dad liefern hierbei die in der Hierarchie eine Ebene tiefer liegenden
+	Personen zurück. Gibt es keine weiteren Personen, wird ein Null-Wert ausgegeben.
+
 3.	Die Methode Find() durchläuft rekursiv den Baum und prüft alle Person-Objekte darauf, 
 	ob die Bedingung in Zeile 22 gegeben ist.
 	Die erste Person, die die Bedingung erfüllt, wird zurückgeliefert.
+
+A3.	Hier prüft Find(), ob der Nachname nicht gleich Battenberg ist.
+	Ist das der Fall, wird die Person zurückgegeben und Find()
+	sucht nach dem Mom-Objekt der Person. Ist dieses nicht gleich Null,
+	wird es zurückgegeben und Find() sucht nach dem Dad-Objekt und
+	gibt dieses zurück. Falls der Nachname Battenberg ist, wird keine weitere Person zurückgegeben,
+	sondern nur noch nach Mutter und Vater der Person gesucht.
 	
+
 4.	Ändert die Bedingung so, dass nicht gleich die erste Person ("Willi") zurückgegeben wird. 
 	Eventuell gibt es Abstürze. Analysiert die Abstürze mit dem Debugger, 
 	überprüft Variableninhalte und den Call-Stack.
+
+A4.	Bei der ersten Änderung habe ich aus if(person.LastName != "Battenberg") ein 
+	if(person.LastName == "Battenberg") gemacht. Dies liefert bei Ausführung eine
+	NullReferenceException zurück.
+	Das passiert, weil Find() immer zuerst die Mutter sucht. Da sie aber bei Willi Cambridge
+	mütterlicherseits keine Person mit Battenberg als Nachnamen im Stammbaum findet, bricht sie die Suche ab.
+	
+	Damit nicht Willi zuerst zurückgegeben wird, kann man zum Beispiel eingeben:
+	
+	 if (person.LastName != "Cambridge" && person.LastName !=  "Spencer").
+	 
+	Somit ist die erste Person, die zurückgegeben wird Franzi Roche,
+	da der Code erst mütterlicherseits alle Mütter überprüft und 
+	zusätzlich die Nachnamen Cambridge und Spencer überspringt.
 	
 5.	Schreibt komplexere Bedingungen, findet z.B. die erste Person, die in einer Altersspanne liegt,
 	vergleicht dazu person.DateOfBirth.Year mit DateTime.Now.Year. 
 	Analysiert mit dem Debugger, ob Eure Bedingung richtig ist.
+	
+A5. Mit der implementierten Formel (siehe FamilyTree.cs) wird das derzeitige Alter der Personen berechnet
+	und die Person ausgegeben, die zuerst die if Bedingung erfüllt. 
+	So kann gezielt nach einem bestimmeten Alter gesucht werden.
+	Nachteil hierbei ist, dass immer noch zuerst die Mütter überprüft werden.
+	Sollte also ein Vater und eine Mutter das gleiche Alter haben,
+	wird immer die Mutter ausgegeben.
+	
+
