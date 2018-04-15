@@ -8,9 +8,13 @@ namespace Debugging
         public string FirstName;
         public string LastName;
         public DateTime DateOfBirth;
-
+        public DateTime NowYear;
         public Person Mom;
         public Person Dad;
+
+        public override string ToString(){
+            return FirstName + " " + LastName + " " + DateOfBirth;
+        }
     }
 
 
@@ -18,15 +22,38 @@ namespace Debugging
     {
         public static Person Find(Person person)
         {
-            Person ret = null;
-            if (person.LastName != "Cambridge" && person.LastName != "Spencer")
+           Person ret = null;
+            /*if (person.LastName != "Battenberg")
                 return person;
 
             ret = Find(person.Mom);
             if (ret != null)
                 return ret;
             ret = Find(person.Dad);
+            return ret;*/
+
+            /*if (person.LastName != "Cambridge" && person.LastName !=  "Spencer")
+                 return person;
+
+             ret = Find(person.Mom);
+             if (ret != null)
+                 return ret;
+             ret = Find(person.Dad);
+             return ret;*/
+
+            int age = DateTime.Now.Year - person.DateOfBirth.Year;
+            if(50 < age && age < 100)
+                return person;
+                
+            if(person.Mom != null)
+            ret = Find(person.Mom);
+            if (ret != null)
+                return ret;
+            if(person.Mom != null)
+            ret = Find(person.Dad);
             return ret;
+
+
         }
 
 

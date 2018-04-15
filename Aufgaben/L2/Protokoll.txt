@@ -1,11 +1,11 @@
-Protokoll zur Aufgabe 2 "Debugging"
+﻿Protokoll zur Aufgabe 2 "Debugging"
 
 1. 	Macht euch klar, dass die Datenstruktur Person rekursiv ist, 
 	denn jedes Objekt vom Typ Person referenziert zwei weitere Objekte vom Typ Person, 
 	nämlich Mom und Dad.
 	
 	
-A1. Die Klasse Person beinhaltet Parameter wie FirstName, LastName und DateOfBirth,
+A1. 	Die Klasse Person beinhaltet Parameter wie FirstName, LastName und DateOfBirth,
 	aber auch weitere Objekte vom Typ Person, nämlich Mom und Dad.
 	Diese rufen wiederrum weitere Objekte vom Typ Person auf, 
 	bis ein Null-Wert zurückgegeben wird.
@@ -64,7 +64,7 @@ A4.	Bei der ersten Änderung habe ich aus if(person.LastName != "Battenberg") ei
 	vergleicht dazu person.DateOfBirth.Year mit DateTime.Now.Year. 
 	Analysiert mit dem Debugger, ob Eure Bedingung richtig ist.
 	
-A5. Mit der implementierten Formel (siehe FamilyTree.cs) wird das derzeitige Alter der Personen berechnet
+A5. 	Mit der implementierten Formel (siehe FamilyTree.cs) wird das derzeitige Alter der Personen berechnet
 	und die Person ausgegeben, die zuerst die if Bedingung erfüllt. 
 	So kann gezielt nach einem bestimmeten Alter gesucht werden.
 	Nachteil hierbei ist, dass immer noch zuerst die Mütter überprüft werden.

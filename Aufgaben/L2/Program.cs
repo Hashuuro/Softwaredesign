@@ -6,6 +6,7 @@ public class SimplePerson
    public string FirstName;
    public string LastName;
    public DateTime DateOfBirth;
+   public DateTime NowYear;
 }
 
 namespace Debugging
@@ -15,9 +16,7 @@ namespace Debugging
         static void Main(string[] args)
         {
             Person root = Familytree.BuildTree();
-
             Person found = Familytree.Find(root);
-
             WriteLine(found);
         }
     }
