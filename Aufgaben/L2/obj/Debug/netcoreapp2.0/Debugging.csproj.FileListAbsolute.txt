@@ -1,0 +1,10 @@
+C:\Users\Koida\Desktop\Softwaredesign-master\Softwaredesign-master\L03_Debugging\bin\Debug\netcoreapp2.0\Debugging.deps.json
+C:\Users\Koida\Desktop\Softwaredesign-master\Softwaredesign-master\L03_Debugging\bin\Debug\netcoreapp2.0\Debugging.runtimeconfig.json
+C:\Users\Koida\Desktop\Softwaredesign-master\Softwaredesign-master\L03_Debugging\bin\Debug\netcoreapp2.0\Debugging.runtimeconfig.dev.json
+C:\Users\Koida\Desktop\Softwaredesign-master\Softwaredesign-master\L03_Debugging\bin\Debug\netcoreapp2.0\Debugging.dll
+C:\Users\Koida\Desktop\Softwaredesign-master\Softwaredesign-master\L03_Debugging\bin\Debug\netcoreapp2.0\Debugging.pdb
+C:\Users\Koida\Desktop\Softwaredesign-master\Softwaredesign-master\L03_Debugging\obj\Debug\netcoreapp2.0\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\Koida\Desktop\Softwaredesign-master\Softwaredesign-master\L03_Debugging\obj\Debug\netcoreapp2.0\Debugging.AssemblyInfoInputs.cache
+C:\Users\Koida\Desktop\Softwaredesign-master\Softwaredesign-master\L03_Debugging\obj\Debug\netcoreapp2.0\Debugging.AssemblyInfo.cs
+C:\Users\Koida\Desktop\Softwaredesign-master\Softwaredesign-master\L03_Debugging\obj\Debug\netcoreapp2.0\Debugging.dll
+C:\Users\Koida\Desktop\Softwaredesign-master\Softwaredesign-master\L03_Debugging\obj\Debug\netcoreapp2.0\Debugging.pdb
