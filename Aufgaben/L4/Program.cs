@@ -37,56 +37,56 @@ namespace L4
 
         public class TreeNode<T>
         {
-            public TreeNode<T> parentNode;
-            public TreeNode<T>[] childNodes;
-            public int numberOfChildNodes = 0;
+            public TreeNode<T> parent;
+            public TreeNode<T>[] child;
+            public int numberOfChildren = 0;
             public T nodeContent;
 
             public void AppendChild(TreeNode<T> node)
             {
-                if (numberOfChildNodes == 0)
+                if (numberOfChildren == 0)
                 {
-                    childNodes = new TreeNode<T>[] { node };
+                    child = new TreeNode<T>[] { node };
                 }
                 else
                 {
-                    TreeNode<T>[] childNodesOld = childNodes;
-                    childNodes = new TreeNode<T>[numberOfChildNodes+1];
-                    Array.Copy(childNodesOld, childNodes, numberOfChildNodes);
-                    childNodes[numberOfChildNodes] = node;
+                    TreeNode<T>[] childOld = child;
+                    child = new TreeNode<T>[numberOfChildren+1];
+                    Array.Copy(childOld, child, numberOfChildren);
+                    child[numberOfChildren] = node;
                 }
 
-                numberOfChildNodes++;
-                node.parentNode = this;
+                numberOfChildren++;
+                node.parent = this;
             }
 
             public void RemoveChild(TreeNode<T> node)
             {
-                if (numberOfChildNodes == 0)
+                if (numberOfChildren == 0)
                 {
                     Console.WriteLine(node.nodeContent + ": Diese Baumstruktur besitzt keine Child-Knoten");
                 }
                 else
                 {
                     Boolean found = false;
-                    for (int i = 0; i < childNodes.Length - 1; i++)
+                    for (int i = 0; i < child.Length - 1; i++)
                     {
-                        if (childNodes[i].Equals(node))
+                        if (child[i].Equals(node))
                         {
                             found = true;
                         }
 
                         if (found)
                         {
-                            childNodes[i] = childNodes[i+1];
+                            child[i] = child[i+1];
                         }
                     }
 
-                    numberOfChildNodes--;
+                    numberOfChildren--;
 
-                    TreeNode<T>[] childNodesOld = childNodes;
-                    childNodes = new TreeNode<T>[numberOfChildNodes];
-                    Array.Copy(childNodesOld, childNodes, numberOfChildNodes);
+                    TreeNode<T>[] childOld = child;
+                    child = new TreeNode<T>[numberOfChildren];
+                    Array.Copy(childOld, child, numberOfChildren);
                 }
             }
 
@@ -94,9 +94,9 @@ namespace L4
             {
                 Console.WriteLine(Hierarchy + nodeContent.ToString());
 
-                if (numberOfChildNodes > 0)
+                if (numberOfChildren > 0)
                 {
-                    foreach(var node in childNodes)
+                    foreach(var node in child)
                     {
                         node.PrintTree(Hierarchy+"*");
                     }
