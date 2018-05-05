@@ -1,0 +1,10 @@
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5\bin\Debug\netcoreapp2.0\L5.deps.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5\bin\Debug\netcoreapp2.0\L5.runtimeconfig.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5\bin\Debug\netcoreapp2.0\L5.runtimeconfig.dev.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5\bin\Debug\netcoreapp2.0\L5.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5\bin\Debug\netcoreapp2.0\L5.pdb
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5\obj\Debug\netcoreapp2.0\L5.csproj.CoreCompileInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5\obj\Debug\netcoreapp2.0\L5.AssemblyInfoInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5\obj\Debug\netcoreapp2.0\L5.AssemblyInfo.cs
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5\obj\Debug\netcoreapp2.0\L5.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5\obj\Debug\netcoreapp2.0\L5.pdb

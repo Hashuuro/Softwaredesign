@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Globalization;
 
 namespace L4
 {
@@ -101,6 +103,12 @@ namespace L4
                         node.PrintTree(Hierarchy+"*");
                     }
                 }
+            }
+
+            public void Find(string s ){
+
+           
+              
             }
         }
 
