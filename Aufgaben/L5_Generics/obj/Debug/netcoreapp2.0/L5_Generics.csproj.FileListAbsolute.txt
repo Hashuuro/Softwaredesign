@@ -1,0 +1,10 @@
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5_Generics\bin\Debug\netcoreapp2.0\L5_Generics.deps.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5_Generics\bin\Debug\netcoreapp2.0\L5_Generics.runtimeconfig.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5_Generics\bin\Debug\netcoreapp2.0\L5_Generics.runtimeconfig.dev.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5_Generics\bin\Debug\netcoreapp2.0\L5_Generics.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5_Generics\bin\Debug\netcoreapp2.0\L5_Generics.pdb
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5_Generics\obj\Debug\netcoreapp2.0\L5_Generics.csproj.CoreCompileInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5_Generics\obj\Debug\netcoreapp2.0\L5_Generics.AssemblyInfoInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5_Generics\obj\Debug\netcoreapp2.0\L5_Generics.AssemblyInfo.cs
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5_Generics\obj\Debug\netcoreapp2.0\L5_Generics.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L5_Generics\obj\Debug\netcoreapp2.0\L5_Generics.pdb
