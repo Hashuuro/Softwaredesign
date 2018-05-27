@@ -1,0 +1,11 @@
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\bin\Debug\netcoreapp2.0\L6_UML.deps.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\bin\Debug\netcoreapp2.0\L6_UML.runtimeconfig.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\bin\Debug\netcoreapp2.0\L6_UML.runtimeconfig.dev.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\bin\Debug\netcoreapp2.0\L6_UML.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\bin\Debug\netcoreapp2.0\L6_UML.pdb
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\obj\Debug\netcoreapp2.0\L6_UML.csprojResolveAssemblyReference.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\obj\Debug\netcoreapp2.0\L6_UML.csproj.CoreCompileInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\obj\Debug\netcoreapp2.0\L6_UML.AssemblyInfoInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\obj\Debug\netcoreapp2.0\L6_UML.AssemblyInfo.cs
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\obj\Debug\netcoreapp2.0\L6_UML.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L6_UML\obj\Debug\netcoreapp2.0\L6_UML.pdb
