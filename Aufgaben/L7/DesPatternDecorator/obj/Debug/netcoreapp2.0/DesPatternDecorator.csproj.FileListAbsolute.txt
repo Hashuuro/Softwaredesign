@@ -1,0 +1,11 @@
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\bin\Debug\netcoreapp2.0\DesPatternDecorator.deps.json
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\bin\Debug\netcoreapp2.0\DesPatternDecorator.runtimeconfig.json
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\bin\Debug\netcoreapp2.0\DesPatternDecorator.runtimeconfig.dev.json
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\bin\Debug\netcoreapp2.0\DesPatternDecorator.dll
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\bin\Debug\netcoreapp2.0\DesPatternDecorator.pdb
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\obj\Debug\netcoreapp2.0\DesPatternDecorator.csprojResolveAssemblyReference.cache
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\obj\Debug\netcoreapp2.0\DesPatternDecorator.csproj.CoreCompileInputs.cache
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\obj\Debug\netcoreapp2.0\DesPatternDecorator.AssemblyInfoInputs.cache
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\obj\Debug\netcoreapp2.0\DesPatternDecorator.AssemblyInfo.cs
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\obj\Debug\netcoreapp2.0\DesPatternDecorator.dll
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternDecorator\obj\Debug\netcoreapp2.0\DesPatternDecorator.pdb

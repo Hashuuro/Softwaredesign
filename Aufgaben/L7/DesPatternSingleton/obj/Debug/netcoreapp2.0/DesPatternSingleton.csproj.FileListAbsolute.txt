@@ -1,0 +1,10 @@
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternSingleton\bin\Debug\netcoreapp2.0\DesPatternSingleton.deps.json
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternSingleton\bin\Debug\netcoreapp2.0\DesPatternSingleton.runtimeconfig.json
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternSingleton\bin\Debug\netcoreapp2.0\DesPatternSingleton.runtimeconfig.dev.json
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternSingleton\bin\Debug\netcoreapp2.0\DesPatternSingleton.dll
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternSingleton\bin\Debug\netcoreapp2.0\DesPatternSingleton.pdb
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternSingleton\obj\Debug\netcoreapp2.0\DesPatternSingleton.csproj.CoreCompileInputs.cache
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternSingleton\obj\Debug\netcoreapp2.0\DesPatternSingleton.AssemblyInfoInputs.cache
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternSingleton\obj\Debug\netcoreapp2.0\DesPatternSingleton.AssemblyInfo.cs
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternSingleton\obj\Debug\netcoreapp2.0\DesPatternSingleton.dll
+C:\Users\Koida\Downloads\Softwaredesign-master\Softwaredesign-master\L07_DesignPatterns\DesPatternSingleton\obj\Debug\netcoreapp2.0\DesPatternSingleton.pdb
