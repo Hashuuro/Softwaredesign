@@ -1,0 +1,11 @@
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\bin\Debug\netcoreapp2.0\L8.deps.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\bin\Debug\netcoreapp2.0\L8.runtimeconfig.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\bin\Debug\netcoreapp2.0\L8.runtimeconfig.dev.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\bin\Debug\netcoreapp2.0\L8.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\bin\Debug\netcoreapp2.0\L8.pdb
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\obj\Debug\netcoreapp2.0\L8.csprojResolveAssemblyReference.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\obj\Debug\netcoreapp2.0\L8.csproj.CoreCompileInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\obj\Debug\netcoreapp2.0\L8.AssemblyInfoInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\obj\Debug\netcoreapp2.0\L8.AssemblyInfo.cs
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\obj\Debug\netcoreapp2.0\L8.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Aufgaben\L8\obj\Debug\netcoreapp2.0\L8.pdb
