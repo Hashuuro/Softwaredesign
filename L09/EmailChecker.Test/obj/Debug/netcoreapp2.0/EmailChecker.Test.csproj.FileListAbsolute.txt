@@ -1,0 +1,17 @@
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\bin\Debug\netcoreapp2.0\EmailChecker.Test.deps.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\bin\Debug\netcoreapp2.0\EmailChecker.Test.runtimeconfig.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\bin\Debug\netcoreapp2.0\EmailChecker.Test.runtimeconfig.dev.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\bin\Debug\netcoreapp2.0\EmailChecker.Test.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\bin\Debug\netcoreapp2.0\EmailChecker.Test.pdb
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\bin\Debug\netcoreapp2.0\EmailChecker.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\bin\Debug\netcoreapp2.0\EmailChecker.pdb
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\obj\Debug\netcoreapp2.0\EmailChecker.Test.csprojResolveAssemblyReference.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\obj\Debug\netcoreapp2.0\EmailChecker.Test.csproj.CoreCompileInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\obj\Debug\netcoreapp2.0\EmailChecker.Test.AssemblyInfoInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\obj\Debug\netcoreapp2.0\EmailChecker.Test.AssemblyInfo.cs
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\obj\Debug\netcoreapp2.0\EmailChecker.Test.csproj.CopyComplete
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\obj\Debug\netcoreapp2.0\EmailChecker.Test.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\L09\EmailChecker.Test\obj\Debug\netcoreapp2.0\EmailChecker.Test.pdb
