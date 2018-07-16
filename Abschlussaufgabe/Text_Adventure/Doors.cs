@@ -16,26 +16,15 @@ namespace Text_Adventure
         private Room leadsTo;
         private Directions direction;
 
-		private bool locked = true;
-		private bool hidden = true;
-        public Door()
-        {
-            direction = Directions.Undefined;
-            leadsTo = null;
-        }
+        private bool locked = true;
 
-        public Door(Directions _direction, Room newLeadsTo)
+
+        public Door(Directions _direction, Room newLeadsTo, bool keyhole)
         {
             direction = _direction;
             leadsTo = newLeadsTo;
-        }
+            locked = keyhole;
 
-		public Door(Directions _direction, Room newLeadsTo, bool keyhole, bool _hidden)
-        {
-            direction = _direction;
-            leadsTo = newLeadsTo;
-			locked = keyhole;
-			hidden = _hidden;
         }
 
         public override string ToString()
@@ -68,14 +57,20 @@ namespace Text_Adventure
             return leadsTo;
         }
 
-		public bool  getLock()
+        public bool SetLocked()
         {
             return locked;
         }
 
-		public bool  gethidden()
+        public void SetLocked(bool _locked)
         {
-            return hidden;
+            locked = _locked;
         }
+
+        public bool GetLocked()
+        {
+            return locked;
+}
+		
     }
 }

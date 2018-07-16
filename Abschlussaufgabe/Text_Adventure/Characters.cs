@@ -11,12 +11,12 @@ namespace Text_Adventure
         //Int
         public int Char_HP_Current = 100;
         public int Char_HP_Full = 100;
+        public int attack_value = 1;
         private List<Item> inventory;
         public string name;
         private bool fightable;
         private bool needsItem;
         private string description;
-        public string weapon;
 
 
         public Character()
@@ -25,15 +25,20 @@ namespace Text_Adventure
             name = "";
             fightable = true;
             inventory = new List<Item>();
-            weapon = "";
+
+
         }
 
-        public Character(string _name, bool canFight, bool neededItem, string _description)
+        public Character(string _name, bool canFight, bool neededItem, string _description, int hp_current, int hp_full, int attack)
         {
             name = _name;
             fightable = canFight;
             needsItem = neededItem;
             description = _description;
+            Char_HP_Current = hp_current;
+            Char_HP_Full = hp_full;
+            attack_value = attack;
+            inventory = new List<Item>();
         }
 
         public Character(string _name, bool canFight, string _description)
@@ -59,7 +64,7 @@ namespace Text_Adventure
         }
 
 
-         public List<Item> getInventory()
+        public List<Item> getInventory()
         {
             return new List<Item>(inventory);
         }
@@ -107,6 +112,19 @@ namespace Text_Adventure
             {
                 Console.WriteLine("\nYour bag is empty.\n");
             }
+        }
+
+
+        public static void showStatus(Character character)
+        {
+            Console.WriteLine("Your Status: ");
+            Console.WriteLine("\n");
+            Console.WriteLine("Name: " + character.name);
+            Console.WriteLine("\n");
+            Console.WriteLine("Health: {0}/{1}", character.Char_HP_Current, character.Char_HP_Full);
+            Console.WriteLine("\n");
+            character.showInventory();
+            Console.WriteLine();
         }
 
     }

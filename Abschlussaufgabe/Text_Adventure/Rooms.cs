@@ -11,7 +11,7 @@ namespace Text_Adventure
         private string roomDescription;
         private List<Door> doors;
         private List<Item> inventory;
-		private List<Character> characters;
+        private List<Character> characters;
 
         public Room()
         {
@@ -20,7 +20,7 @@ namespace Text_Adventure
             roomDescription = "";
             doors = new List<Door>();
             inventory = new List<Item>();
-			characters = new List<Character>();
+            characters = new List<Character>();
         }
 
         public Room(string title)
@@ -29,7 +29,7 @@ namespace Text_Adventure
             roomDescription = "";
             doors = new List<Door>();
             inventory = new List<Item>();
-			characters = new List<Character>();
+            characters = new List<Character>();
         }
 
         public Room(string title, string description)
@@ -38,7 +38,7 @@ namespace Text_Adventure
             roomDescription = description;
             doors = new List<Door>();
             inventory = new List<Item>();
-			characters = new List<Character>();
+            characters = new List<Character>();
         }
 
         public override string ToString()
@@ -69,6 +69,7 @@ namespace Text_Adventure
             return new List<Item>(inventory);
         }
 
+
         public void addItem(Item itemToAdd)
         {
             inventory.Add(itemToAdd);
@@ -82,7 +83,7 @@ namespace Text_Adventure
             }
         }
 
-		public List<Character> getCharacters()
+        public List<Character> getCharacters()
         {
             return new List<Character>(characters);
         }
