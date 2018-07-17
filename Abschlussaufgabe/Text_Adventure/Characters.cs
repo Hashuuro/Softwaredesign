@@ -11,81 +11,78 @@ namespace Text_Adventure
         //Int
         public int Char_HP_Current = 100;
         public int Char_HP_Full = 100;
-        public int attack_value = 1;
-        private List<Item> inventory;
-        public string name;
-        private bool fightable;
-        private bool needsItem;
-        private string description;
+        public int Attack_value = 1;
+        private List<Item> _inventory;
+        private string _name;
+        private bool _fightable;
+        private bool _needsItem;
+        private string _description;
 
 
         public Character()
         {
             // Blank out the title and description at start
-            name = "";
-            fightable = true;
-            inventory = new List<Item>();
+            _name = "";
+            _fightable = true;
+            _inventory = new List<Item>();
 
 
         }
 
-        public Character(string _name, bool canFight, bool neededItem, string _description, int hp_current, int hp_full, int attack)
+        public Character(string name, bool canFight, bool neededItem, string description, int hp_current, int hp_full, int attack)
         {
-            name = _name;
-            fightable = canFight;
-            needsItem = neededItem;
-            description = _description;
+            _name = name;
+            _fightable = canFight;
+            _needsItem = neededItem;
+            _description = description;
             Char_HP_Current = hp_current;
             Char_HP_Full = hp_full;
-            attack_value = attack;
-            inventory = new List<Item>();
-        }
-
-        public Character(string _name, bool canFight, string _description)
-        {
-            name = _name;
-            fightable = canFight;
-            description = _description;
+            Attack_value = attack;
+            _inventory = new List<Item>();
         }
 
         public string Name
         {
-            get { return name; }
+            get { return _name; }
         }
 
 
         public string Description
         {
-            get { return description; }
+            get { return _description; }
         }
 
-
-        public List<Item> getInventory()
+         public void SetName(string Name)
         {
-            return new List<Item>(inventory);
+            _name = Name;
         }
 
-        public void addItem(Item itemToAdd)
+        public List<Item> GetInventory()
         {
-            inventory.Add(itemToAdd);
+            return new List<Item>(_inventory);
         }
 
-        public void removeItem(Item itemToRemove)
+        public void AddItem(Item itemToAdd)
         {
-            if (inventory.Contains(itemToRemove))
+            _inventory.Add(itemToAdd);
+        }
+
+        public void RemoveItem(Item itemToRemove)
+        {
+            if (_inventory.Contains(itemToRemove))
             {
-                inventory.Remove(itemToRemove);
+                _inventory.Remove(itemToRemove);
             }
         }
 
-        public Item takeItem(string name)
+        public Item TakeItem(string name)
         {
-            foreach (Item _item in inventory)
+            foreach (Item _item in _inventory)
             {
                 if (_item.Name.ToLower() == name)
                 {
                     Item temp = _item;
-                    inventory.Remove(temp);
+                    _inventory.Remove(temp);
                     return temp;
                 }
             }
@@ -95,11 +92,11 @@ namespace Text_Adventure
 
         public void ShowInventory()
         {
-            if (inventory.Count > 0)
+            if (_inventory.Count > 0)
             {
                 Console.WriteLine("\nA quick look in your bag reveals the following:\n");
 
-                foreach (Item item in inventory)
+                foreach (Item item in _inventory)
                 {
                     Console.WriteLine(item.Name);
                 }

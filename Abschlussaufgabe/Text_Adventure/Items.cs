@@ -6,57 +6,57 @@ namespace Text_Adventure
     class Item
     {
 
-        public string name;
-        private bool useable;
-        private bool needsItem;
-        private string description;
-        private int attack_bonus;
+        private string _name;
+        private bool _useable;
+        private bool _needsItem;
+        private string _description;
+        private int _attack_bonus;
 
-        public Item(string _name, bool canUse, bool neededItem, string _description)
+        public Item(string name, bool canUse, bool neededItem, string description)
         {
-            name = _name;
-            useable = canUse;
-            needsItem = neededItem;
-            description = _description;
+            _name = name;
+            _useable = canUse;
+            _needsItem = neededItem;
+            _description = description;
         }
-        public Item(string _name, bool canUse, string _description, int attack_Bonus)
+        public Item(string name, bool canUse, string description, int attack_Bonus)
         {
-            name = _name;
-            useable = canUse;
-            description = _description;
-            attack_bonus = attack_Bonus;
+            _name = name;
+            _useable = canUse;
+            _description = description;
+            _attack_bonus = attack_Bonus;
         }
 
 
-        public Item(string _name, bool canUse, string _description)
+        public Item(string name, bool canUse, string description)
         {
-            name = _name;
-            useable = canUse;
-            description = _description;
+            _name = name;
+            _useable = canUse;
+            _description = description;
         }
 
         public string Name
         {
-            get { return name; }
+            get { return _name; }
         }
 
         public bool Useable
         {
-            get { return useable; }
+            get { return _useable; }
         }
 
         public bool KeyItem
         {
-            get { return needsItem; }
+            get { return _needsItem; }
         }
 
         public int Weapon_bonus
         {
-            get { return attack_bonus; }
+            get { return _attack_bonus; }
         }
         public string Description
         {
-            get { return description; }
+            get { return _description; }
         }
     }
 }

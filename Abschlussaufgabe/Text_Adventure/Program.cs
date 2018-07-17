@@ -8,11 +8,11 @@ namespace Text_Adventure
         static void Main(string[] args)
         {
 
-            Game Game = new Game();
+            Game game = new Game();
 
-            while (Game.game_running)
+            while (game.Game_running)
             {
-                Game.Update();
+                game.Update();
             }
 
         }

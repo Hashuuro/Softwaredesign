@@ -34,25 +34,25 @@ namespace Text_Adventure
                 return;
             }
 
-            if (currentRoom.getInventory().Exists(x => x.Name == command.Substring(8)) && currentRoom.getInventory().Exists(x => x.Useable == true))
+            if (currentRoom.GetInventory().Exists(x => x.Name == command.Substring(8)) && currentRoom.GetInventory().Exists(x => x.Useable == true))
             {
                 if (command.Substring(8).ToLower() == "papers")
                 {
-                    currentCharacter.addItem(currentRoom.takeItem(command.Substring(8)));
+                    currentCharacter.AddItem(currentRoom.TakeItem(command.Substring(8)));
                     Console.WriteLine("\nYou pick up the " + command.Substring(8) + "and hear the sound of something metallic falling.");
                     Item big_key = new Item("big key", true, true, "A big key with many ornaments.");
-                    currentRoom.addItem(big_key);
+                    currentRoom.AddItem(big_key);
                     return;
                 }
                 else
                 {
-                    currentCharacter.addItem(currentRoom.takeItem(command.Substring(8)));
+                    currentCharacter.AddItem(currentRoom.TakeItem(command.Substring(8)));
                     Console.WriteLine("\nYou pick up the " + command.Substring(8) + ".\n");
                     return;
                 }
             }
 
-            if (currentRoom.getInventory().Exists(x => x.Name == command.Substring(8)) && currentRoom.getInventory().Exists(x => x.Useable == false))
+            if (currentRoom.GetInventory().Exists(x => x.Name == command.Substring(8)) && currentRoom.GetInventory().Exists(item => item.Useable == false))
             {
                 Console.WriteLine("\nYou cannot pick up the " + command.Substring(8) + ".\n");
                 return;
@@ -73,13 +73,13 @@ namespace Text_Adventure
                 Console.WriteLine("\nPlease specify what you would like to drop.\n");
                 return;
             }
-            if (currentCharacter.getInventory().Exists(x => x.Name == command.Substring(5)))
+            if (currentCharacter.GetInventory().Exists(item => item.Name == command.Substring(5)))
             {
-                currentRoom.addItem(currentCharacter.takeItem(command.Substring(5)));
-                Console.WriteLine("\nYou droped the " + command.Substring(5) + ".\n");
+                currentRoom.AddItem(currentCharacter.TakeItem(command.Substring(5)));
+                Console.WriteLine("\n{0} droped the " + command.Substring(5) + ".\n",currentCharacter.Name);
                 return;
             }
-            if (currentRoom.getInventory().Exists(x => x.Name == command.Substring(5)) && currentRoom.getInventory().Exists(x => x.KeyItem == true))
+            if (currentRoom.GetInventory().Exists(item => item.Name == command.Substring(5)) && currentRoom.GetInventory().Exists(item => item.KeyItem == true))
             {
                 Console.WriteLine("\nYou cannot drop the " + command.Substring(5) + ".\n");
                 return;
@@ -100,19 +100,19 @@ namespace Text_Adventure
                 return;
             }
 
-            if (currentRoom.getCharacters().Exists(x => x.Name.ToLower().Equals(command.ToLower().Substring(8))))
+            if (currentRoom.GetCharacters().Exists(character => character.Name.ToLower().Equals(command.ToLower().Substring(8))))
             {
-                Console.WriteLine("\n" + currentRoom.getCharacters().Find(x => x.Name.ToLower().Equals(command.ToLower().Substring(8))).Description + "\n");
+                Console.WriteLine("\n" + currentRoom.GetCharacters().Find(character => character.Name.ToLower().Equals(command.ToLower().Substring(8))).Description + "\n");
                 return;
             }
-            if (currentRoom.getInventory().Exists(x => x.Name.ToLower() == command.ToLower().Substring(8)))
+            if (currentRoom.GetInventory().Exists(item => item.Name.ToLower() == command.ToLower().Substring(8)))
             {
-                Console.WriteLine("\n" + currentRoom.getInventory().Find(x => x.Name.ToLower().Equals(command.ToLower().Substring(8))).Description + "\n");
+                Console.WriteLine("\n" + currentRoom.GetInventory().Find(item => item.Name.ToLower().Equals(command.ToLower().Substring(8))).Description + "\n");
                 return;
             }
-            if (currentCharacter.getInventory().Exists(x => x.Name.ToLower() == command.ToLower().Substring(8)))
+            if (currentCharacter.GetInventory().Exists(item => item.Name.ToLower() == command.ToLower().Substring(8)))
             {
-                Console.WriteLine("\n" + currentCharacter.getInventory().Find(x => x.Name.ToLower().Equals(command.ToLower().Substring(8))).Description + "\n");
+                Console.WriteLine("\n" + currentCharacter.GetInventory().Find(item => item.Name.ToLower().Equals(command.ToLower().Substring(8))).Description + "\n");
                 return;
             }
             else
@@ -131,28 +131,28 @@ namespace Text_Adventure
                 return;
             }
 
-            if (currentCharacter.getInventory().Exists(x => x.Name == command.ToLower().Substring(4)))
+            if (currentCharacter.GetInventory().Exists(item => item.Name == command.ToLower().Substring(4)))
             {
 
-                if (currentRoom.getTitle() == "Bedroom" && command.ToLower().Substring(4) == "small key")
+                if (currentRoom.GetTitle() == "Bedroom" && command.ToLower().Substring(4) == "small key")
                 {
-                    Door studydoor_east = currentRoom.getDoors().Find(x => x.getDirection().Equals(Door.Directions.East));
+                    Door studydoor_east = currentRoom.GetDoors().Find(door => door.GetDirection().Equals(Door.Directions.East));
                     studydoor_east.SetLocked(false);
-                    Console.WriteLine("you unlocked the Door!");
+                    Console.WriteLine("\nyou unlocked the Door!\n");
                     return;
                 }
 
                  if (command.ToLower().Substring(4) == "painkiller")
                 {
-                    healing(currentCharacter,"painkiller");
+                    Healing(currentCharacter,"painkiller");
                     return;          
                 }
 
-                if (currentRoom.getTitle() == "Living Room" && command.ToLower().Substring(4) == "big key")
+                if (currentRoom.GetTitle() == "Living Room" && command.ToLower().Substring(4) == "big key")
                 {
-                    Door atelierdoor = currentRoom.getDoors().Find(x => x.getDirection().Equals(Door.Directions.West));
+                    Door atelierdoor = currentRoom.GetDoors().Find(door => door.GetDirection().Equals(Door.Directions.West));
                     atelierdoor.SetLocked(false);
-                    Console.WriteLine("you unlocked the Door!");
+                    Console.WriteLine("\nyou unlocked the Door!\n");
 
                     return;
                 }
@@ -161,15 +161,15 @@ namespace Text_Adventure
                 
                 string secondItem = Console.ReadLine();
 
-                if (currentRoom.getInventory().Exists(x => x.Name == secondItem.ToLower()))
+                if (currentRoom.GetInventory().Exists(item => item.Name == secondItem.ToLower()))
                 {
                     if (secondItem == "podest" && command.Substring(4) == "amethyst")
                     {
                         Item  escapeRoute= new Item("passage", false, "A long and dark Passage. In the distance you can see a little light glowing.");
                         
-                        currentRoom.addItem(escapeRoute);
-                        currentRoom.removeItem(currentRoom.getInventory().Find(x=>x.name =="Podest"));     
-                        currentRoom.removeItem(currentCharacter.getInventory().Find(x=>x.name =="amethyst"));
+                        currentRoom.AddItem(escapeRoute);
+                        currentRoom.RemoveItem(currentRoom.GetInventory().Find(item=>item.Name =="Podest"));     
+                        currentRoom.RemoveItem(currentCharacter.GetInventory().Find(item=>item.Name =="amethyst"));
                         Console.WriteLine("\nYou placed the amethyst on the Podest. It sinks slowly in to the ground and reaveals a dark Passageway.\n");
                         return;
                     }
@@ -177,59 +177,59 @@ namespace Text_Adventure
 
                     if (secondItem == "shelf" && command.Substring(4) == "weights")
                     {
-                        Console.WriteLine("You throw the weights on top of the shelf and it comes crushing down, revealing some painkillers");
+                        Console.WriteLine("\n\nYou throw the weights on top of the shelf and it comes crushing down, revealing some painkillers\n\n");
                         Item health = new Item("painkiller", true, "Painkiller, which you can get nearly everywhere. Still they do their job.",30);
-                        currentRoom.addItem(health);
+                        currentRoom.AddItem(health);
 
                         return;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Cannot do the thing.");
+                    Console.WriteLine("\nCannot do the thing.\n");
                     return;
                 }
             }
-            if (currentRoom.getInventory().Exists(x => x.Name == command.ToLower().Substring(4)))
+            if (currentRoom.GetInventory().Exists(item => item.Name == command.ToLower().Substring(4)))
             {
                 switch (command.ToLower().Substring(4))
                 {
                     case ("light switch"):
 
-                        Console.WriteLine("You turned the light on.");
-                        currentRoom.setDescription("You are standing in the Entry Hall.\nIt's a room with a high ceiling and the floor was made from marble.\nThere are a wardrobe an a hatstand in the corner of the room\nand you notice some shoe prints leading deeper into the mansion.");
+                        Console.WriteLine("\n\nYou turned the light on.\n\n");
+                        currentRoom.SetDescription("You are standing in the Entry Hall.\nIt's a room with a high ceiling and the floor was made from marble.\nThere are a wardrobe an a hatstand in the corner of the room\nand you notice some shoe prints leading deeper into the mansion.");
                         Item umbrella = new Item("umbrella", true, "An classic umbrella with a sharp end.", 10);
-                        currentRoom.addItem(umbrella);
-                        Item light = currentRoom.getInventory().Find(x => x.Name.Contains("light"));
-                        currentRoom.removeItem(light);
+                        currentRoom.AddItem(umbrella);
+                        Item light = currentRoom.GetInventory().Find(item => item.Name.Contains("light"));
+                        currentRoom.RemoveItem(light);
 
                     return;
 
                     case ("clock"):
 
-                        Console.WriteLine("You opened the clock and found some weights.");
+                        Console.WriteLine("\n\nYou opened the clock and found some weights.\n\n");
                         Item weights = new Item("weights", true, "These weights are normally used to adjust the clock.\nI wonder if they could be used for other things?", 10);
-                        currentRoom.addItem(weights);
-                        Item clock = currentRoom.getInventory().Find(x => x.Name.Contains("clock"));
-                        currentRoom.removeItem(clock);
+                        currentRoom.AddItem(weights);
+                        Item clock = currentRoom.GetInventory().Find(item => item.Name.Contains("clock"));
+                        currentRoom.RemoveItem(clock);
 
                     return;
 
                     case ("bathtub"):
 
-                        Console.WriteLine("Slowy the water begins sinking and you can see a key on the ground\n");
+                        Console.WriteLine("\n\nSlowy the water begins sinking and you can see a key on the ground\n\n");
                         Item small_key = new Item("small key", true, "A small key, for one of the closed rooms in the Mansion.\nBut which one?");
-                        currentRoom.addItem(small_key);
-                        Item bathtub = currentRoom.getInventory().Find(x => x.Name.Contains("bathtub"));
-                        currentRoom.removeItem(bathtub);
+                        currentRoom.AddItem(small_key);
+                        Item bathtub = currentRoom.GetInventory().Find(item => item.Name.Contains("bathtub"));
+                        currentRoom.RemoveItem(bathtub);
 
 
                     return;
 
                     case ("passage"):
 
-                        Console.WriteLine("\nAt the End of the Passage you get in to the open.\nYou squeeze your eyes and look around.\nBehind you is a large forest and if you look close,\nyou can see the Mansion in the Distance.\nYou begin to walk away from the Mansion,\nnot turning back once. You live and that is all that matters.");
-                        Game.gameOver = true;
+                        Console.WriteLine("\n\nAt the End of the Passage you get in to the open.\nYou squeeze your eyes and look around.\nBehind you is a large forest and if you look close,\nyou can see the Mansion in the Distance.\nYou begin to walk away from the Mansion,\nnot turning back once. You live and that is all that matters.\n\n");
+                        Game.GameOver = true;
 
 
                     return;
@@ -252,119 +252,113 @@ namespace Text_Adventure
                 Console.WriteLine("\nPlease specify what you wish to use.\n");
                 return;
             }
-            if (currentRoom.getCharacters().Exists(x => x.Name.ToLower().Equals(command.ToLower().Substring(7))))
+            if (currentRoom.GetCharacters().Exists(character => character.Name.ToLower().Equals(command.ToLower().Substring(7))))
             {
 
                 Console.WriteLine("\nattack " + command.Substring(7) + " with?\n");
 
                 string weapon = Console.ReadLine();
 
-                if (currentCharacter.getInventory().Exists(x => x.Name == weapon))
+                if (currentCharacter.GetInventory().Exists(item => item.Name == weapon))
                 {
-                    currentEnemy = currentRoom.getCharacters().Find(x => x.Name.ToLower().Equals(command.ToLower().Substring(7)));
+                    currentEnemy = currentRoom.GetCharacters().Find(character => character.Name.ToLower().Equals(command.ToLower().Substring(7)));
 
-                    Item currentWeapon = currentCharacter.getInventory().Find(x => x.Name.Contains(weapon));
+                    Item currentWeapon = currentCharacter.GetInventory().Find(item => item.Name.Contains(weapon));
 
                     int attackmodifier = currentWeapon.Weapon_bonus;
 
                     if (currentCharacter.Char_HP_Current > 0 && currentEnemy.Char_HP_Current > 0)
                     {
 
-                        int damage = currentCharacter.attack_value + attackmodifier;
+                        int damage = currentCharacter.Attack_value + attackmodifier;
 
                         int hp_enemy = currentEnemy.Char_HP_Current - damage;
 
                         currentEnemy.Char_HP_Current = hp_enemy;
 
-                        int myhp = currentCharacter.Char_HP_Current - currentEnemy.attack_value;
+                        int myhp = currentCharacter.Char_HP_Current - currentEnemy.Attack_value;
 
                         currentCharacter.Char_HP_Current = myhp;
 
 
-                        switch (currentEnemy.name)
+                        switch (currentEnemy.Name)
                         {
                             case ("Dog"):
 
-                                Console.WriteLine("You hit {0} for {1} Damage!", currentEnemy.name, damage);
-                                Console.WriteLine("\n");
+                                Console.WriteLine("\nYou hit {0} for {1} Damage!\n", currentEnemy.Name, damage);
                                 Console.WriteLine("Woof. Grr!!");
-                                Console.WriteLine("\n");
-                                Console.WriteLine("{0} hit you for {1} Damage!", currentEnemy.name, currentEnemy.attack_value);
+                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.Attack_value);
 
                             return;
 
                             case ("Zombie"):
 
-                                Console.WriteLine("You hit {0} for {1} Damage!", currentEnemy.name, damage);
-                                Console.WriteLine("\n");
+                                Console.WriteLine("\nYou hit {0} for {1} Damage!\n", currentEnemy.Name, damage);
                                 Console.WriteLine("Urrrga. Graa!!");
-                                Console.WriteLine("\n");
-                                Console.WriteLine("{0} hit you for {1} Damage!", currentEnemy.name, currentEnemy.attack_value);
+                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.Attack_value);
 
                             return;
 
                             case ("Sean Michals"):
 
-                                Console.WriteLine("You hit {0} for {1} Damage!",currentEnemy.name, damage);
-                                Console.WriteLine("\n");
+                                Console.WriteLine("\nYou hit {0} for {1} Damage!\n",currentEnemy.Name, damage);
                                 Console.WriteLine("What are you doing you bastard. Here come and get it!");
-                                Console.WriteLine("\n");
-                                Console.WriteLine("{0} hit you for {1} Damage!", currentEnemy.name, currentEnemy.attack_value);
+                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.Attack_value);
 
                             return;
 
                             case ("Sarah Hardy"):
 
-                                Console.WriteLine("You hit {0} for {1} Damage!", currentEnemy.name, damage);
-                                Console.WriteLine("\n");
+                                Console.WriteLine("\nYou hit {0} for {1} Damage!\n", currentEnemy.Name, damage);
                                 Console.WriteLine("Ouch that hurt! That should bring you back to your senses!");
-                                Console.WriteLine("\n");
-                                Console.WriteLine("{0} hit you for {1} Damage!", currentEnemy.name, currentEnemy.attack_value);
+                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.Attack_value);
 
                             return;
                         }
                     }
                     if (currentCharacter.Char_HP_Current > 0 && currentEnemy.Char_HP_Current <= 0)
                     {
-                        switch (currentEnemy.name)
+                        switch (currentEnemy.Name)
                         {
                             case("Dog"):
 
-                            Console.WriteLine("Feeep. Wimper.");
+                            Console.WriteLine("\nFeeep. Wimper.\n");
 
                             break;
 
                             case("Zombie"):
                             
-                            Console.WriteLine("Guaahh. Uurgs.");
+                            Console.WriteLine("\nGuaahh. Uurgs.\n");
 
                             break;
 
                             case("Sean Michals"):
 
-                            Console.WriteLine("You son of a....i hope you'll rot in hell!");
+                            Console.WriteLine("\nYou son of a....i hope you'll rot in hell!\n");
+
+                            Drop("drop pistol", currentRoom,currentEnemy);
 
                             break;
 
                             case("Sarah Hardy"):
 
-                            Console.WriteLine("Why must it end here? What evil has befallen you?");
+                            Console.WriteLine("\nWhy must it end here? What evil has befallen you?\n");
 
                             break;
                         }
-                        currentRoom.removeCharacter(currentEnemy);
-                        Console.WriteLine("Enemy defeated!");
+                        currentRoom.RemoveCharacter(currentEnemy);
+                        Console.WriteLine("\nEnemy defeated!\n");
                         return;
                     }
                     else
                     {
-                        Game.gameOver = true;
+                        Game.GameOver = true;
                         return;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("You have no weapon to fight with!");
+                    Console.WriteLine("\nYou have no weapon to fight with!\n");
                     return;
                 }
 
@@ -376,30 +370,27 @@ namespace Text_Adventure
             }
         }
 
-        private static void healing(Character currentCharacter, string Item)
+        // Heal yourself
+        private static void Healing(Character currentCharacter, string Item)
         {
-            Item healitem = currentCharacter.getInventory().Find(x => x.name == Item);
+            Item healitem = currentCharacter.GetInventory().Find(item => item.Name == Item);
 
             int healing = currentCharacter.Char_HP_Current + healitem.Weapon_bonus;
             
             currentCharacter.Char_HP_Current = healing;
 
-            currentCharacter.removeItem(currentCharacter.getInventory().Find(x=>x.name == Item));
+            currentCharacter.RemoveItem(currentCharacter.GetInventory().Find(item=>item.Name == Item));
 
-            Console.WriteLine("You healed yourself for " + healitem.Weapon_bonus);
+            Console.WriteLine("\nYou healed yourself for " + healitem.Weapon_bonus+"\n");
         }
 
         //show Character status
         public static void ShowStatus(Character character)
         {
-            Console.WriteLine("Your Status: ");
-            Console.WriteLine("\n");
-            Console.WriteLine("Name: " + character.name);
-            Console.WriteLine("\n");
-            Console.WriteLine("Health: {0}/{1}", character.Char_HP_Current, character.Char_HP_Full);
-            Console.WriteLine("\n");
+            Console.WriteLine("\nYour Status: ");
+            Console.WriteLine("Name: " + character.Name+"\n");
+            Console.WriteLine("Health: {0}/{1}", character.Char_HP_Current, character.Char_HP_Full+"\n");
             character.ShowInventory();
-            Console.WriteLine();
         }
 
         

@@ -7,108 +7,108 @@ namespace Text_Adventure
 {
     class Room
     {
-        private string roomTitle;
-        private string roomDescription;
-        private List<Door> doors;
-        private List<Item> inventory;
-        private List<Character> characters;
+        private string _roomTitle;
+        private string _roomDescription;
+        private List<Door> _doors;
+        private List<Item> _inventory;
+        private List<Character> _characters;
 
         public Room()
         {
             // Blank out the title and description at start
-            roomTitle = "";
-            roomDescription = "";
-            doors = new List<Door>();
-            inventory = new List<Item>();
-            characters = new List<Character>();
+            _roomTitle = "";
+            _roomDescription = "";
+            _doors = new List<Door>();
+            _inventory = new List<Item>();
+            _characters = new List<Character>();
         }
 
         public Room(string title)
         {
-            roomTitle = title;
-            roomDescription = "";
-            doors = new List<Door>();
-            inventory = new List<Item>();
-            characters = new List<Character>();
+            _roomTitle = title;
+            _roomDescription = "";
+            _doors = new List<Door>();
+            _inventory = new List<Item>();
+            _characters = new List<Character>();
         }
 
         public Room(string title, string description)
         {
-            roomTitle = title;
-            roomDescription = description;
-            doors = new List<Door>();
-            inventory = new List<Item>();
-            characters = new List<Character>();
+            _roomTitle = title;
+            _roomDescription = description;
+            _doors = new List<Door>();
+            _inventory = new List<Item>();
+            _characters = new List<Character>();
         }
 
         public override string ToString()
         {
-            return roomTitle;
+            return _roomTitle;
         }
 
-        public void addDoor(Door door)
+        public void AddDoor(Door door)
         {
-            doors.Add(door);
+            _doors.Add(door);
         }
 
-        public void removeDoor(Door door)
+        public void RemoveDoor(Door door)
         {
-            if (doors.Contains(door))
+            if (_doors.Contains(door))
             {
-                doors.Remove(door);
+                _doors.Remove(door);
             }
         }
 
-        public List<Door> getDoors()
+        public List<Door> GetDoors()
         {
-            return new List<Door>(doors);
+            return new List<Door>(_doors);
         }
 
-        public List<Item> getInventory()
+        public List<Item> GetInventory()
         {
-            return new List<Item>(inventory);
+            return new List<Item>(_inventory);
         }
 
 
-        public void addItem(Item itemToAdd)
+        public void AddItem(Item itemToAdd)
         {
-            inventory.Add(itemToAdd);
+            _inventory.Add(itemToAdd);
         }
 
-        public void removeItem(Item itemToRemove)
+        public void RemoveItem(Item itemToRemove)
         {
-            if (inventory.Contains(itemToRemove))
+            if (_inventory.Contains(itemToRemove))
             {
-                inventory.Remove(itemToRemove);
+                _inventory.Remove(itemToRemove);
             }
         }
 
-        public List<Character> getCharacters()
+        public List<Character> GetCharacters()
         {
-            return new List<Character>(characters);
+            return new List<Character>(_characters);
         }
 
-        public void addCharacter(Character characterToAdd)
+        public void AddCharacter(Character characterToAdd)
         {
-            characters.Add(characterToAdd);
+            _characters.Add(characterToAdd);
         }
 
-        public void removeCharacter(Character characterToRemove)
+        public void RemoveCharacter(Character characterToRemove)
         {
-            if (characters.Contains(characterToRemove))
+            if (_characters.Contains(characterToRemove))
             {
-                characters.Remove(characterToRemove);
+                _characters.Remove(characterToRemove);
             }
         }
 
-        public Item takeItem(string name)
+        public Item TakeItem(string name)
         {
-            foreach (Item _item in inventory)
+            foreach (Item _item in _inventory)
             {
                 if (_item.Name.ToLower() == name)
                 {
                     Item temp = _item;
-                    inventory.Remove(temp);
+                    _inventory.Remove(temp);
                     return temp;
                 }
             }
@@ -116,24 +116,24 @@ namespace Text_Adventure
             return null;
         }
 
-        public string getTitle()
+        public string GetTitle()
         {
-            return roomTitle;
+            return _roomTitle;
         }
 
-        public void setTitle(string title)
+        public void SetTitle(string title)
         {
-            roomTitle = title;
+            _roomTitle = title;
         }
 
-        public string getDescription()
+        public string GetDescription()
         {
-            return roomDescription;
+            return _roomDescription;
         }
 
-        public void setDescription(string description)
+        public void SetDescription(string description)
         {
-            roomDescription = description;
+            _roomDescription = description;
         }
     }
 }

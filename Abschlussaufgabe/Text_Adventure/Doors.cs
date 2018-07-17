@@ -11,65 +11,65 @@ namespace Text_Adventure
             Undefined, North, South, East, West
         };
 
-        public static string[] shortDirections = { "Null", "N", "S", "E", "W" };
+        public static string[] ShortDirections = { "Null", "N", "S", "E", "W" };
 
-        private Room leadsTo;
-        private Directions direction;
+        private Room _leadsTo;
+        private Directions _Direction;
 
-        private bool locked = true;
+        private bool _locked = true;
 
 
         public Door(Directions _direction, Room newLeadsTo, bool keyhole)
         {
-            direction = _direction;
-            leadsTo = newLeadsTo;
-            locked = keyhole;
+            _Direction = _direction;
+            _leadsTo = newLeadsTo;
+            _locked = keyhole;
 
         }
 
         public override string ToString()
         {
-            return direction.ToString();
+            return _Direction.ToString();
         }
 
-        public void setDirection(Directions _direction)
+        public void SetDirection(Directions _direction)
         {
-            direction = _direction;
+            _Direction = _direction;
         }
 
-        public Directions getDirection()
+        public Directions GetDirection()
         {
-            return direction;
+            return _Direction;
         }
 
-        public string getShortDirection()
+        public string GetShortDirection()
         {
-            return shortDirections[(int)direction].ToLower();
+            return ShortDirections[(int)_Direction].ToLower();
         }
 
-        public void setLeadsTo(Room _leadsTo)
+        public void SetLeadsTo(Room leadsTo)
         {
-            leadsTo = _leadsTo;
+            _leadsTo = leadsTo;
         }
 
-        public Room getLeadsTo()
+        public Room GetLeadsTo()
         {
-            return leadsTo;
+            return _leadsTo;
         }
 
         public bool SetLocked()
         {
-            return locked;
+            return _locked;
         }
 
-        public void SetLocked(bool _locked)
+        public void SetLocked(bool locked)
         {
-            locked = _locked;
+            _locked = locked;
         }
 
         public bool GetLocked()
         {
-            return locked;
+            return _locked;
 }
 		
     }
