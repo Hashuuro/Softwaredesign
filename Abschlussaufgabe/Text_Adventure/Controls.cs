@@ -7,8 +7,6 @@ namespace Text_Adventure
     class Controls
     {
 
-        private List<Room> map = new List<Room>();
-
         // show aviable commands
         public static void ShowCommands()
         {
@@ -18,10 +16,11 @@ namespace Text_Adventure
             Console.WriteLine("'Look at X':         Gives you information about a specific item in your \n                     inventory, where X is the items name.");
             Console.WriteLine("'pick up X':         Attempts to pick up an item, where X is the items name.");
             Console.WriteLine("'use X':             Attempts to use an item, where X is the items name.");
+            Console.WriteLine("'drop X':            Attempts to drop an item, where X is the items name.");
+            Console.WriteLine("'attack X':          Attacks another character, where X stands for \n                           the characters name");
             Console.WriteLine("'i' / 'inventory':   Allows you to see the items in your inventory.");
             Console.WriteLine("'status':            Tells you the name and condition of your character.");
-            Console.WriteLine("'attack with':       Attacks another character.");
-            Console.WriteLine("'q' / quit':        Quits the game.");
+            Console.WriteLine("'q' / quit':         Quits the game.");
             Console.WriteLine("Directions can be input as either the full word, or the abbriviation, \ne.g. 'North or N'");
         }
 
