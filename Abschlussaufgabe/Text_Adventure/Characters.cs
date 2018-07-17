@@ -53,10 +53,6 @@ namespace Text_Adventure
             get { return name; }
         }
 
-        public bool Fightable
-        {
-            get { return fightable; }
-        }
 
         public string Description
         {
@@ -97,7 +93,7 @@ namespace Text_Adventure
             return null;
         }
 
-        public void showInventory()
+        public void ShowInventory()
         {
             if (inventory.Count > 0)
             {
@@ -112,19 +108,6 @@ namespace Text_Adventure
             {
                 Console.WriteLine("\nYour bag is empty.\n");
             }
-        }
-
-
-        public static void showStatus(Character character)
-        {
-            Console.WriteLine("Your Status: ");
-            Console.WriteLine("\n");
-            Console.WriteLine("Name: " + character.name);
-            Console.WriteLine("\n");
-            Console.WriteLine("Health: {0}/{1}", character.Char_HP_Current, character.Char_HP_Full);
-            Console.WriteLine("\n");
-            character.showInventory();
-            Console.WriteLine();
         }
 
     }

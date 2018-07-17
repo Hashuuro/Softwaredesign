@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Koida\\Documents\\GitHub\\Softwaredesign_Lukas\\Abschlussaufgabe\\Text_Adventure\\Text_Adventure.csproj",
+      "projectUniqueName": "C:\\Users\\Koida\\Documents\\GitHub\\Softwaredesign_Lukas\\Abschlussaufgabe\\Text_Adventure\\Text_Adventure.csproj",
       "projectName": "Text_Adventure",
-      "projectPath": "c:\\Users\\Koida\\Documents\\GitHub\\Softwaredesign_Lukas\\Abschlussaufgabe\\Text_Adventure\\Text_Adventure.csproj",
+      "projectPath": "C:\\Users\\Koida\\Documents\\GitHub\\Softwaredesign_Lukas\\Abschlussaufgabe\\Text_Adventure\\Text_Adventure.csproj",
       "packagesPath": "C:\\Users\\Koida\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Koida\\Documents\\GitHub\\Softwaredesign_Lukas\\Abschlussaufgabe\\Text_Adventure\\obj\\",
+      "outputPath": "C:\\Users\\Koida\\Documents\\GitHub\\Softwaredesign_Lukas\\Abschlussaufgabe\\Text_Adventure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

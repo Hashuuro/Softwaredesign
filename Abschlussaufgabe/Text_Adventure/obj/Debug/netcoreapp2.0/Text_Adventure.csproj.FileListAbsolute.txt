@@ -9,3 +9,14 @@ C:\Users\Koida\Visual_Code_Workspace\Text_Adventure\obj\Debug\netcoreapp2.0\Text
 C:\Users\Koida\Visual_Code_Workspace\Text_Adventure\obj\Debug\netcoreapp2.0\Text_Adventure.AssemblyInfo.cs
 C:\Users\Koida\Visual_Code_Workspace\Text_Adventure\obj\Debug\netcoreapp2.0\Text_Adventure.dll
 C:\Users\Koida\Visual_Code_Workspace\Text_Adventure\obj\Debug\netcoreapp2.0\Text_Adventure.pdb
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\bin\Debug\netcoreapp2.0\Text_Adventure.deps.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\bin\Debug\netcoreapp2.0\Text_Adventure.runtimeconfig.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\bin\Debug\netcoreapp2.0\Text_Adventure.runtimeconfig.dev.json
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\bin\Debug\netcoreapp2.0\Text_Adventure.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\bin\Debug\netcoreapp2.0\Text_Adventure.pdb
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\obj\Debug\netcoreapp2.0\Text_Adventure.csprojResolveAssemblyReference.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\obj\Debug\netcoreapp2.0\Text_Adventure.csproj.CoreCompileInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\obj\Debug\netcoreapp2.0\Text_Adventure.AssemblyInfoInputs.cache
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\obj\Debug\netcoreapp2.0\Text_Adventure.AssemblyInfo.cs
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\obj\Debug\netcoreapp2.0\Text_Adventure.dll
+C:\Users\Koida\Documents\GitHub\Softwaredesign_Lukas\Abschlussaufgabe\Text_Adventure\obj\Debug\netcoreapp2.0\Text_Adventure.pdb
