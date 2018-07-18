@@ -328,11 +328,11 @@ namespace Text_Adventure
         private void MoveNPC(string NPC)
         {
 
-            if(map.Exists(x => x.GetCharacters().Exists(y => y.Name == NPC)))
+            if(map.Exists(room => room.GetCharacters().Exists(character => character.Name == NPC)))
             {
-                currentRoomNPC = map.Find(Room => Room.GetCharacters().Exists(x => x.Name == NPC));
+                currentRoomNPC = map.Find(Room => Room.GetCharacters().Exists(character => character.Name == NPC));
                
-                currentNPC = currentRoomNPC.GetCharacters().Find(x => x.Name == NPC);
+                currentNPC = currentRoomNPC.GetCharacters().Find(character => character.Name == NPC);
                
                 string[] direction = new string[] { "North","South","West","East" };
 

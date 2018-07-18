@@ -33,7 +33,7 @@ namespace Text_Adventure
                 return;
             }
 
-            if (currentRoom.GetInventory().Exists(x => x.Name == command.Substring(8)) && currentRoom.GetInventory().Exists(x => x.Useable == true))
+            if (currentRoom.GetInventory().Exists(item => item.Name == command.Substring(8)) && currentRoom.GetInventory().Exists(item => item.Useable == true))
             {
                 if (command.Substring(8).ToLower() == "papers")
                 {
@@ -51,7 +51,7 @@ namespace Text_Adventure
                 }
             }
 
-            if (currentRoom.GetInventory().Exists(x => x.Name == command.Substring(8)) && currentRoom.GetInventory().Exists(item => item.Useable == false))
+            if (currentRoom.GetInventory().Exists(item => item.Name == command.Substring(8)) && currentRoom.GetInventory().Exists(item => item.Useable == false))
             {
                 Console.WriteLine("\nYou cannot pick up the " + command.Substring(8) + ".\n");
                 return;
