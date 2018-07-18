@@ -78,7 +78,7 @@ namespace Text_Adventure
                 Console.WriteLine("\n{0} droped the " + command.Substring(5) + ".\n",currentCharacter.Name);
                 return;
             }
-            if (currentRoom.GetInventory().Exists(item => item.Name == command.Substring(5)) && currentRoom.GetInventory().Exists(item => item.KeyItem == true))
+            if (currentCharacter.GetInventory().Exists(item => item.Name == command.Substring(5)) && currentCharacter.GetInventory().Exists(item => item.KeyItem == true))
             {
                 Console.WriteLine("\nYou cannot drop the " + command.Substring(5) + ".\n");
                 return;
@@ -264,20 +264,20 @@ namespace Text_Adventure
 
                     Item currentWeapon = currentCharacter.GetInventory().Find(item => item.Name.Contains(weapon));
 
-                    int attackmodifier = currentWeapon.Weapon_bonus;
+                    int attackmodifier = currentWeapon.WeaponBonus;
 
-                    if (currentCharacter.Char_HP_Current > 0 && currentEnemy.Char_HP_Current > 0)
+                    if (currentCharacter.CharHpCurrent > 0 && currentEnemy.CharHpCurrent > 0)
                     {
 
-                        int damage = currentCharacter.Attack_value + attackmodifier;
+                        int damage = currentCharacter.AttackValue + attackmodifier;
 
-                        int hp_enemy = currentEnemy.Char_HP_Current - damage;
+                        int hp_enemy = currentEnemy.CharHpCurrent - damage;
 
-                        currentEnemy.Char_HP_Current = hp_enemy;
+                        currentEnemy.CharHpCurrent = hp_enemy;
 
-                        int myhp = currentCharacter.Char_HP_Current - currentEnemy.Attack_value;
+                        int myhp = currentCharacter.CharHpCurrent - currentEnemy.AttackValue;
 
-                        currentCharacter.Char_HP_Current = myhp;
+                        currentCharacter.CharHpCurrent = myhp;
 
 
                         switch (currentEnemy.Name)
@@ -286,7 +286,7 @@ namespace Text_Adventure
 
                                 Console.WriteLine("\nYou hit {0} for {1} Damage!\n", currentEnemy.Name, damage);
                                 Console.WriteLine("Woof. Grr!!");
-                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.Attack_value);
+                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.AttackValue);
 
                             return;
 
@@ -294,7 +294,7 @@ namespace Text_Adventure
 
                                 Console.WriteLine("\nYou hit {0} for {1} Damage!\n", currentEnemy.Name, damage);
                                 Console.WriteLine("Urrrga. Graa!!");
-                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.Attack_value);
+                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.AttackValue);
 
                             return;
 
@@ -302,7 +302,7 @@ namespace Text_Adventure
 
                                 Console.WriteLine("\nYou hit {0} for {1} Damage!\n",currentEnemy.Name, damage);
                                 Console.WriteLine("What are you doing you bastard. Here come and get it!");
-                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.Attack_value);
+                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.AttackValue);
 
                             return;
 
@@ -310,12 +310,12 @@ namespace Text_Adventure
 
                                 Console.WriteLine("\nYou hit {0} for {1} Damage!\n", currentEnemy.Name, damage);
                                 Console.WriteLine("Ouch that hurt! That should bring you back to your senses!");
-                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.Attack_value);
+                                Console.WriteLine("\n{0} hit you for {1} Damage!\n", currentEnemy.Name, currentEnemy.AttackValue);
 
                             return;
                         }
                     }
-                    if (currentCharacter.Char_HP_Current > 0 && currentEnemy.Char_HP_Current <= 0)
+                    if (currentCharacter.CharHpCurrent > 0 && currentEnemy.CharHpCurrent <= 0)
                     {
                         switch (currentEnemy.Name)
                         {
@@ -374,13 +374,13 @@ namespace Text_Adventure
         {
             Item healitem = currentCharacter.GetInventory().Find(item => item.Name == Item);
 
-            int healing = currentCharacter.Char_HP_Current + healitem.Weapon_bonus;
+            int healing = currentCharacter.CharHpCurrent + healitem.WeaponBonus;
             
-            currentCharacter.Char_HP_Current = healing;
+            currentCharacter.CharHpCurrent = healing;
 
             currentCharacter.RemoveItem(currentCharacter.GetInventory().Find(item=>item.Name == Item));
 
-            Console.WriteLine("\nYou healed yourself for " + healitem.Weapon_bonus+"\n");
+            Console.WriteLine("\nYou healed yourself for " + healitem.WeaponBonus+"\n");
         }
 
         //show Character status
@@ -388,7 +388,7 @@ namespace Text_Adventure
         {
             Console.WriteLine("\nYour Status: ");
             Console.WriteLine("Name: " + character.Name+"\n");
-            Console.WriteLine("Health: {0}/{1}", character.Char_HP_Current, character.Char_HP_Full+"\n");
+            Console.WriteLine("Health: {0}/{1}", character.CharHpCurrent, character.CharHpFull+"\n");
             character.ShowInventory();
         }
 

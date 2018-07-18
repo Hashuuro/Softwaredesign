@@ -9,9 +9,9 @@ namespace Text_Adventure
     class Character
     {
         //Int
-        public int Char_HP_Current = 100;
-        public int Char_HP_Full = 100;
-        public int Attack_value = 1;
+        public int CharHpCurrent = 100;
+        public int CharHpFull = 100;
+        public int AttackValue = 1;
         private List<Item> _inventory;
         private string _name;
         private bool _fightable;
@@ -35,9 +35,9 @@ namespace Text_Adventure
             _fightable = canFight;
             _needsItem = neededItem;
             _description = description;
-            Char_HP_Current = hp_current;
-            Char_HP_Full = hp_full;
-            Attack_value = attack;
+            CharHpCurrent = hp_current;
+            CharHpFull = hp_full;
+            AttackValue = attack;
             _inventory = new List<Item>();
         }
 

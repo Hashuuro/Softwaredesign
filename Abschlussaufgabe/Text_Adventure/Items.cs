@@ -10,7 +10,7 @@ namespace Text_Adventure
         private bool _useable;
         private bool _needsItem;
         private string _description;
-        private int _attack_bonus;
+        private int _attackBonus;
 
         public Item(string name, bool canUse, bool neededItem, string description)
         {
@@ -24,7 +24,7 @@ namespace Text_Adventure
             _name = name;
             _useable = canUse;
             _description = description;
-            _attack_bonus = attack_Bonus;
+            _attackBonus = attack_Bonus;
         }
 
 
@@ -50,9 +50,9 @@ namespace Text_Adventure
             get { return _needsItem; }
         }
 
-        public int Weapon_bonus
+        public int WeaponBonus
         {
-            get { return _attack_bonus; }
+            get { return _attackBonus; }
         }
         public string Description
         {

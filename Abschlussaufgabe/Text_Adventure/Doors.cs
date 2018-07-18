@@ -56,12 +56,7 @@ namespace Text_Adventure
         {
             return _leadsTo;
         }
-
-        public bool SetLocked()
-        {
-            return _locked;
-        }
-
+        
         public void SetLocked(bool locked)
         {
             _locked = locked;

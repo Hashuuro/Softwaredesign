@@ -18,7 +18,7 @@ namespace Text_Adventure
         Character currentEnemy;
 
         Character currentNPC; 
-        public bool Game_running = true;
+        public bool GameRunning = true;
         public static bool GameOver = false;
         //character name
         public static string Charname = "John Doe";
@@ -319,7 +319,7 @@ namespace Text_Adventure
                 }
                 else
                 {
-                    Console.WriteLine("Door is closed!");
+                    Console.WriteLine("\nDoor is closed!\n");
                 }
             }
         }
@@ -385,7 +385,7 @@ namespace Text_Adventure
             // instantly check for a quit
             if (currentCommand == "quit" || currentCommand == "q")
             {
-                Game_running = false;
+                GameRunning = false;
                 return;
             }
 

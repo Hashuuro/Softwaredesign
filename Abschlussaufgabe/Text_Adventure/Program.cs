@@ -10,7 +10,7 @@ namespace Text_Adventure
 
             Game game = new Game();
 
-            while (game.Game_running)
+            while (game.GameRunning)
             {
                 game.Update();
             }
